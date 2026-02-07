@@ -9721,4 +9721,21 @@ textarea.form-control {
   display: block;
 }
 
+/* My Works button + icons ko same line me lane ke liye */
+.hero .btn,
+.hero .ftco-footer-social {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Icons ko button se thoda right me shift */
+.hero .ftco-footer-social {
+  margin-left: 15px;
+  margin-top: 8px; /* neeche chipakne se roke */
+}
+
+/* Icon spacing */
+.hero .ftco-footer-social li {
+  margin-right: 10px;
+}
 
