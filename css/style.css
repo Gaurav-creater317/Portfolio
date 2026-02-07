@@ -9707,3 +9707,18 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+/* ===== Center LeetCode icon with rest of social icons ===== */
+.ftco-footer-social li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ftco-footer-social li a img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+
