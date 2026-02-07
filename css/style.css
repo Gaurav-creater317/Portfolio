@@ -9708,18 +9708,6 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
-/* ===== Center LeetCode icon with rest of social icons ===== */
-.ftco-footer-social li a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.ftco-footer-social li a img {
-  width: 20px;
-  height: 20px;
-  display: block;
-}
 
 /* My Works button + icons ko same line me lane ke liye */
 .hero .btn,
@@ -9737,5 +9725,13 @@ textarea.form-control {
 /* Icon spacing */
 .hero .ftco-footer-social li {
   margin-right: 10px;
+}
+
+/* LeetCode icon ko baaki icons jaisa banane ke liye */
+.leetcode-icon {
+  width: 18px;
+  height: 18px;
+  filter: invert(70%);
+  display: block;
 }
 
