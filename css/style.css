@@ -9758,3 +9758,31 @@ textarea.form-control {
   filter: invert(0); /* black logo on yellow bg = 🔥 */
 }
 
+.dev-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  filter: invert(80%);
+  transition: all 0.3s ease;
+}
+
+.ftco-footer-social {
+  display: flex;
+  flex-wrap: wrap;     /* 👈 responsiveness ka hero */
+  gap: 10px;           /* spacing between icons */
+}
+
+@media (max-width: 576px) {
+  .ftco-footer-social li a {
+    width: 42px;
+    height: 42px;
+  }
+
+  .leetcode-icon,
+  .dev-icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
