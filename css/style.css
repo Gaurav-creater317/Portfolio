@@ -9764,6 +9764,7 @@ textarea.form-control {
   display: block;
   filter: invert(80%);
   transition: all 0.3s ease;
+  fill: currentColor;   /* text ko color ke sath sync karega */ 
 }
 
 .ftco-footer-social {
@@ -9784,5 +9785,15 @@ textarea.form-control {
     height: 16px;
   }
 }
+
+.ftco-footer-social img {
+  pointer-events: none;
+}
+
+.leetcode-icon,
+.dev-icon {
+  filter: invert(85%);
+}
+
 
 
