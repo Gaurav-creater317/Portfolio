@@ -9727,15 +9727,17 @@ textarea.form-control {
   margin-right: 10px;
 }
 
-/* LeetCode icon ko baaki icons jaisa banane ke liye */
+/* LeetCode icon base */
 .leetcode-icon {
   width: 18px;
   height: 18px;
-  display: block;      /* correct */
-  filter: invert(70%); /* normal state */
+  display: block;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
 }
 
-.ftco-footer-social li a:has(.leetcode-icon) {
+/* Anchor styling (same as other icons) */
+.ftco-footer-social li a.leetcode-link {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -9746,12 +9748,13 @@ textarea.form-control {
   transition: all 0.3s ease;
 }
 
-.ftco-footer-social li a:has(.leetcode-icon):hover {
+/* Hover effect */
+.ftco-footer-social li a.leetcode-link:hover {
   background: #ffbd39;
 }
 
-.ftco-footer-social li a:has(.leetcode-icon):hover .leetcode-icon {
-  filter: brightness(0);
+/* Hover pe real LeetCode color */
+.ftco-footer-social li a.leetcode-link:hover .leetcode-icon {
+  filter: none;
 }
-
 
