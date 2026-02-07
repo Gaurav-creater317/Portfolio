@@ -9795,5 +9795,28 @@ textarea.form-control {
   filter: invert(85%);
 }
 
+/* Dev icon circle – SAME as LeetCode */
+.ftco-footer-social li a.dev-link {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* Dev hover – SAME FEEL */
+.ftco-footer-social li a.dev-link:hover {
+  background: #ffbd39;
+  transform: translateY(-3px) scale(1.05);
+}
+
+.ftco-footer-social li a.dev-link:hover .dev-icon {
+  filter: invert(0);
+}
+
+
 
 
