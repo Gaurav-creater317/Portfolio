@@ -1511,15 +1511,141 @@
 		/* Specific alignment fix for "Get in touch" watermark */
 		#get-in-touch .heading-section h1.big {
 			font-size: 8vw !important;
-			/* Reduce size to fit on one line */
 			white-space: nowrap !important;
-			/* Prevent wrapping */
 			top: -10px !important;
-			/* Adjust vertical position */
 			width: 100% !important;
 			left: 0 !important;
 			right: 0 !important;
 			z-index: 0 !important;
+		}
+
+		/* Responsive Media Queries */
+		@media (max-width: 991.98px) {
+			.ftco_navbar {
+				background: var(--navbar-bg) !important;
+				backdrop-filter: blur(15px);
+			}
+
+			.navbar-brand img {
+				width: 30px !important;
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			#typing-animation {
+				font-size: 24px !important;
+			}
+
+			.hero .text h1 {
+				font-size: 36px !important;
+			}
+
+			.one-third {
+				height: 350px !important;
+				margin-bottom: 2rem;
+			}
+
+			.heading-section h2 {
+				font-size: 28px !important;
+			}
+
+			.heading-section h1.big {
+				font-size: 15vw !important;
+				top: -5px !important;
+			}
+
+			.contact-form {
+				padding: 1.5rem !important;
+			}
+
+			.ftco-hireme h2 {
+				font-size: 28px !important;
+			}
+
+			.certification-card,
+			.achievement-card {
+				margin-bottom: 1.5rem !important;
+			}
+
+			/* Container padding for mobile */
+			.container {
+				padding-left: 20px !important;
+				padding-right: 20px !important;
+			}
+		}
+
+		@media (max-width: 575.98px) {
+			#typing-animation {
+				font-size: 18px !important;
+			}
+
+			.hero .text h1 {
+				font-size: 28px !important;
+			}
+
+			.hero .text h2 {
+				font-size: 16px !important;
+			}
+
+			.heading-section h1.big {
+				font-size: 20vw !important;
+			}
+
+			.btn-outline-white,
+			.btn-primary {
+				padding: 12px 20px !important;
+				font-size: 14px !important;
+				width: 100%;
+				margin-bottom: 10px;
+			}
+
+			.ftco-footer-social {
+				justify-content: center !important;
+				margin-left: 0 !important;
+				margin-top: 1.5rem;
+			}
+
+			.hero .text {
+				text-align: center !important;
+				width: 100% !important;
+			}
+
+			.hero .text .subheading {
+				margin-bottom: 0 !important;
+			}
+
+			.hero .text h1 {
+				margin-top: 10px !important;
+			}
+
+			.about-info li {
+				padding: 8px 5px !important;
+			}
+
+			.about-img {
+				margin-bottom: 2rem;
+			}
+		}
+
+		/* Smooth scrolling for mobile */
+		html {
+			scroll-behavior: smooth;
+		}
+
+		/* Fix for sticky navigation on mobile */
+		@media (max-width: 991px) {
+			.ftco_navbar.awake {
+				margin-top: 0 !important;
+				top: 0 !important;
+			}
+		}
+
+		/* Fix for horizontal scroll issues */
+		html,
+		body {
+			overflow-x: hidden !important;
+			width: 100%;
+			position: relative;
 		}
 	</style>
 
@@ -1549,6 +1675,10 @@
 					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#certifications-section"
+							class="nav-link"><span>Certifications</span></a></li>
+					<li class="nav-item"><a href="#achievements-section" class="nav-link"><span>Achievements</span></a>
+					</li>
 					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 					<li class="nav-item d-flex align-items-center ml-lg-3">
 						<button id="theme-toggle" class="btn-theme">
@@ -2122,6 +2252,396 @@
 		</div>
 	</section>
 
+	<!-- Certifications Section -->
+	<section class="ftco-section" id="certifications-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Certifications</h1>
+					<h2 class="mb-4">My <span>Certifications</span></h2>
+					<p>Professional certifications and courses I've completed to enhance my skills</p>
+				</div>
+			</div>
+
+			<!-- Row 1 -->
+			<div class="row">
+				<!-- 1. FreeCodeCamp - Responsive Web Design -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://www.freecodecamp.org/certification/fccfe44d5e0-f0e9-42ad-8f51-8ab7663e0a79/responsive-web-design"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #0a0a23 0%, #1a1a3e 100%); display: flex; align-items: center; justify-content: center; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/Certificate - Responsive Web Design freeCodeCamp.jpeg"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="FreeCodeCamp">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.freecodecamp.org/certification/fccfe44d5e0-f0e9-42ad-8f51-8ab7663e0a79/responsive-web-design"
+									target="_blank" rel="noopener noreferrer">Responsive Web Design</a></h3>
+							<p>FreeCodeCamp - HTML, CSS, Flexbox, Grid</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 2. FreeCodeCamp - JavaScript Algorithms -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://www.freecodecamp.org/certification/fccfe44d5e0-f0e9-42ad-8f51-8ab7663e0a79/javascript-algorithms-and-data-structures-v8"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #0a0a23 0%, #1a1a3e 100%); display: flex; align-items: center; justify-content: center; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/Java-Script Certificate freeCodeCamp.png"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="FreeCodeCamp">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.freecodecamp.org/certification/fccfe44d5e0-f0e9-42ad-8f51-8ab7663e0a79/javascript-algorithms-and-data-structures-v8"
+									target="_blank" rel="noopener noreferrer">JavaScript Algorithms & DSA</a></h3>
+							<p>FreeCodeCamp - Algorithms & Problem-solving</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 3. FreeCodeCamp - Front End Libraries -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://www.freecodecamp.org/certification/fccfe44d5e0-f0e9-42ad-8f51-8ab7663e0a79/front-end-development-libraries"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #0a0a23 0%, #1a1a3e 100%); display: flex; align-items: center; justify-content: center; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/Screenshot 2026-02-09 132603.png"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="FreeCodeCamp">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.freecodecamp.org/certification/fccfe44d5e0-f0e9-42ad-8f51-8ab7663e0a79/front-end-development-libraries"
+									target="_blank" rel="noopener noreferrer">Front End Libraries</a></h3>
+							<p>FreeCodeCamp - React, Redux, Bootstrap</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 4. GeeksforGeeks -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://www.geeksforgeeks.org/certificate/75eb47754eabe9296d4fb2953098b2fa"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #2f8d46 0%, #1e5a2f 100%); display: flex; align-items: center; justify-content: center; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/Screenshot 2026-02-09 125444.png"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="GeeksforGeeks">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.geeksforgeeks.org/certificate/75eb47754eabe9296d4fb2953098b2fa"
+									target="_blank" rel="noopener noreferrer">GeeksforGeeks Practice</a></h3>
+							<p>Coding challenges & DSA problems</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Row 2 -->
+			<div class="row mt-4">
+				<!-- 5. Great Learning - Java Programming -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://olympus.mygreatlearning.com/courses/12385/certificate"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%); display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/Screenshot 2026-02-09 132248.png"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="Great Learning">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a href="https://olympus.mygreatlearning.com/courses/12385/certificate"
+									target="_blank" rel="noopener noreferrer">Java Programming</a></h3>
+							<p>Great Learning - Core Java & OOP</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 6. Great Learning - Programming Basics -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://olympus.mygreatlearning.com/courses/46349/certificate?pb_id=581"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%); display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/Screenshot 2026-02-09 132228.png"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="Great Learning">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://olympus.mygreatlearning.com/courses/46349/certificate?pb_id=581"
+									target="_blank" rel="noopener noreferrer">Programming Basics</a></h3>
+							<p>Great Learning - Foundation concepts</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 7. LinkedIn Learning Certificate 1 -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://www.linkedin.com/learning/certificates/e6f6767774bb70ded3431b345f0e78d4022a6bd0a51e0d4902f86cda25786cf0"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #0077b5 0%, #004471 100%); display: flex; align-items: center; justify-content: center; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/linkedin_cert1.png"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="LinkedIn Certificate">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.linkedin.com/learning/certificates/e6f6767774bb70ded3431b345f0e78d4022a6bd0a51e0d4902f86cda25786cf0"
+									target="_blank" rel="noopener noreferrer">Generative AI Essentials</a></h3>
+							<p>Microsoft and LinkedIn - Career Path</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 8. LinkedIn Learning Certificate 2 -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://www.linkedin.com/learning/certificates/4e1feed886ab8cdb0dc8050266c574c920f4e89f7ddbc7c16c59beb865616171"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #0077b5 0%, #004471 100%); display: flex; align-items: center; justify-content: center; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/linkedin_cert2.png"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="LinkedIn Certificate">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.linkedin.com/learning/certificates/4e1feed886ab8cdb0dc8050266c574c920f4e89f7ddbc7c16c59beb865616171"
+									target="_blank" rel="noopener noreferrer">Software Development</a></h3>
+							<p>Microsoft and LinkedIn - Career Essentials</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Row 3 -->
+			<div class="row mt-4 justify-content-center">
+				<!-- 9. Simplilearn - Gemini for Google Workspace -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0NzQ2IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODg3OTM3OV84Njc2NjIwMTc1NjQ4NjMyMTc5Ni5wbmciLCJ1c2VybmFtZSI6IkdhdXJhdiBNZWhyYSJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #ff6b35 0%, #d94a1a 100%); display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/simplilearn_cert.png"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="Simplilearn">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0NzQ2IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODg3OTM3OV84Njc2NjIwMTc1NjQ4NjMyMTc5Ni5wbmciLCJ1c2VybmFtZSI6IkdhdXJhdiBNZWhyYSJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion"
+									target="_blank" rel="noopener noreferrer">Gemini for Workspace</a></h3>
+							<p>Simplilearn - AI productivity tools</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0NzU3IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODg4MjQ5MV85MjcxOTE5MTc1NjU0NDExOTk2MS5wbmciLCJ1c2VybmFtZSI6IkdhdXJhdiBNZWhyYSJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%); display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/simplilearn_copilot.png"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="Simplilearn Copilot">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0NzU3IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvODg4MjQ5MV85MjcxOTE5MTc1NjU0NDExOTk2MS5wbmciLCJ1c2VybmFtZSI6IkdhdXJhdiBNZWhyYSJ9&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion"
+									target="_blank" rel="noopener noreferrer">Prompt Engineering</a></h3>
+							<p>Simplilearn - GitHub Copilot</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 11. Hack2Skill - GenAI -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://certificate.hack2skill.com/user/GenAI5-28M/2025H2S04GENAI-A00059"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #6366f1 0%, #4338ca 100%); display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/hack2skill_cert.png"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="Hack2Skill GenAI">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://certificate.hack2skill.com/user/GenAI5-28M/2025H2S04GENAI-A00059"
+									target="_blank" rel="noopener noreferrer">Generative AI</a></h3>
+							<p>Hack2Skill - GenAI technologies</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 12. World Forum Certificate -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://web.certificate.wfglobal.org/en/certificate?certificateId=67b4aa1e44cd89a4058c9833"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%); display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/Screenshot 2026-02-09 125046.png"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="Wadhwani Foundation">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://web.certificate.wfglobal.org/en/certificate?certificateId=67b4aa1e44cd89a4058c9833"
+									target="_blank" rel="noopener noreferrer">Employability Skills</a></h3>
+							<p>Wadhwani Foundation - JobReady Basic</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Achievements Section -->
+	<section class="ftco-section" id="achievements-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Achievements</h1>
+					<h2 class="mb-4">My <span>Achievements</span></h2>
+					<p>Milestones and recognitions earned throughout my journey</p>
+				</div>
+			</div>
+
+			<!-- Row 1 -->
+			<div class="row justify-content-center">
+				<!-- 1. GitHub Starstruck -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://github.com/users/Gaurav-creater317/achievements/starstruck"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #1f2937 0%, #111827 100%); display: flex; align-items: center; justify-content: center; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/achievements/starstruck.png" style="width: 80%; height: auto;"
+								alt="Starstruck">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://github.com/users/Gaurav-creater317/achievements/starstruck"
+									target="_blank" rel="noopener noreferrer">GitHub Starstruck</a></h3>
+							<p>Repository with multiple stars</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 2. GitHub Pull Shark -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://github.com/users/Gaurav-creater317/achievements/pull-shark"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #1f2937 0%, #111827 100%); display: flex; align-items: center; justify-content: center; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/achievements/pull-shark.png" style="width: 80%; height: auto;"
+								alt="Pull Shark">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://github.com/users/Gaurav-creater317/achievements/pull-shark"
+									target="_blank" rel="noopener noreferrer">GitHub Pull Shark</a></h3>
+							<p>Multiple merged pull requests</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 3. GitHub YOLO -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://github.com/users/Gaurav-creater317/achievements/yolo"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #1f2937 0%, #111827 100%); display: flex; align-items: center; justify-content: center; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/achievements/yolo.png" style="width: 80%; height: auto;"
+								alt="YOLO">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a href="https://github.com/users/Gaurav-creater317/achievements/yolo"
+									target="_blank" rel="noopener noreferrer">GitHub YOLO</a></h3>
+							<p>Merged PR without review</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 4. LeetCode 100 Days Badge -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://leetcode.com/medal/?showImg=0&id=8744670&isLevel=false"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/achievements/leetcode_100.png"
+								style="height: 100%; width: auto; max-width: 100%; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.5));"
+								alt="LeetCode">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a href="https://leetcode.com/medal/?showImg=0&id=8744670&isLevel=false"
+									target="_blank" rel="noopener noreferrer">LeetCode 100 Days</a></h3>
+							<p>100 consecutive days of coding</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 5. Google AI Studio Achievement -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://dev.to/i_am_gaurav" class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #4285f4 0%, #34a853 100%); display: flex; align-items: center; justify-content: center; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/achievements/dev_community.png"
+								style="width: 85%; height: auto;" alt="Google AI Studio">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a href="https://dev.to/i_am_gaurav" target="_blank"
+									rel="noopener noreferrer">Google AI Studio</a></h3>
+							<p>Contributed to Google AI Studio DevEd</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 6. DEV.to Author Badge -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://dev.to/i_am_gaurav" class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #f472b6 0%, #d946ef 100%); display: flex; align-items: center; justify-content: center; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/achievements/dev_author_badge.png"
+								style="width: 70%; height: auto;" alt="DEV.to Author">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a href="https://dev.to/i_am_gaurav" target="_blank"
+									rel="noopener noreferrer">DEV.to Contributor</a></h3>
+							<p>Recognized author on DEV Community</p>
+						</div>
+					</div>
+				</div>
+				<!-- 7. Google Cloud Arcade Achievement -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://www.skills.google/public_profiles/2c5d3eef-648d-40e7-a4d9-99eb59823e4e"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%); display: flex; align-items: center; justify-content: center; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/achievements/Google Cloud Arcade.jpeg"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="Google Cloud Arcade">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.skills.google/public_profiles/2c5d3eef-648d-40e7-a4d9-99eb59823e4e"
+									target="_blank" rel="noopener noreferrer">Google Cloud Arcade</a></h3>
+							<p>Earned exclusive Google Cloud Swag</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
 	<section class="ftco-section contact-section" id="contact-section">
@@ -2293,6 +2813,12 @@
 							<li><a href="#resume-section"><span class="icon-long-arrow-right mr-2"></span>Resume</a>
 							</li>
 							<li><a href="#project-section"><span class="icon-long-arrow-right mr-2"></span>Projects</a>
+							</li>
+							<li><a href="#certifications-section"><span
+										class="icon-long-arrow-right mr-2"></span>Certifications</a>
+							</li>
+							<li><a href="#achievements-section"><span
+										class="icon-long-arrow-right mr-2"></span>Achievements</a>
 							</li>
 							<li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a>
 							</li>
