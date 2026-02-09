@@ -1078,6 +1078,17 @@
 
 		/* Tablets (768px - 991px) */
 		@media (max-width: 991.98px) {
+
+			/* Prevent all overflow issues on mobile */
+			body {
+				overflow-x: hidden;
+			}
+
+			.container,
+			.container-fluid {
+				overflow-x: hidden;
+			}
+
 			.navbar-nav {
 				background: rgba(15, 23, 42, 0.95);
 				backdrop-filter: blur(10px);
@@ -1085,6 +1096,9 @@
 				border-radius: 15px;
 				margin-top: 15px;
 				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+				overflow: hidden;
+				max-width: 100%;
+				text-align: center;
 			}
 
 			[data-theme="light"] .navbar-nav {
@@ -1092,13 +1106,96 @@
 				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 			}
 
+			.navbar-nav .nav-item {
+				display: block;
+				width: 100%;
+			}
+
 			.navbar-nav .nav-link {
-				padding: 12px 15px !important;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+				padding: 15px 20px !important;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+				text-align: center;
+				display: block;
+				font-size: 16px;
+				letter-spacing: 0.5px;
+			}
+
+			[data-theme="light"] .navbar-nav .nav-link {
+				border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+			}
+
+			/* Disable ALL hover transforms on mobile to prevent overflow */
+			.navbar-nav .nav-link:hover,
+			.navbar-nav .nav-link:active,
+			.navbar-nav .nav-link:focus {
+				transform: none !important;
+				background: rgba(37, 99, 235, 0.1);
+				border-radius: 8px;
+			}
+
+			[data-theme="light"] .navbar-nav .nav-link:hover,
+			[data-theme="light"] .navbar-nav .nav-link:active,
+			[data-theme="light"] .navbar-nav .nav-link:focus {
+				background: rgba(37, 99, 235, 0.08);
 			}
 
 			.navbar-nav .nav-link:last-child {
 				border-bottom: none;
+			}
+
+			.navbar-nav .nav-item.active .nav-link {
+				background: rgba(37, 99, 235, 0.15);
+				border-radius: 8px;
+				font-weight: 600;
+			}
+
+			.navbar-collapse {
+				overflow: hidden;
+			}
+
+			/* Disable card hover effects on mobile */
+			.blog-entry:hover,
+			.blog-entry:active {
+				transform: none !important;
+			}
+
+			.resume-wrap:hover,
+			.resume-wrap:active {
+				transform: none !important;
+			}
+
+			.align-self-stretch.box:hover,
+			.align-self-stretch.box:active {
+				transform: none !important;
+			}
+
+			.block-18:hover,
+			.block-18:active {
+				transform: none !important;
+			}
+
+			/* Disable button transforms on mobile */
+			.btn-primary:hover,
+			.btn-primary:active,
+			.btn-outline-white:hover,
+			.btn-outline-white:active {
+				transform: none !important;
+			}
+
+			/* Disable social icon transforms */
+			.ftco-footer-social li a:hover,
+			.ftco-footer-social li a:active {
+				transform: none !important;
+			}
+
+			/* Disable footer widget transforms */
+			.ftco-footer .ftco-footer-widget h2:hover {
+				transform: none !important;
+			}
+
+			/* Disable author name transforms */
+			.author-name:hover {
+				transform: none !important;
 			}
 
 			.heading-section h1.big {
@@ -1119,6 +1216,7 @@
 
 			.ftco-section {
 				padding: 5em 0;
+				overflow-x: hidden;
 			}
 
 			.about-mf .box-shadow-full {
@@ -1142,10 +1240,50 @@
 			.col-md-6 {
 				margin-bottom: 30px;
 			}
+
+			/* Ensure rows don't overflow */
+			.row {
+				margin-left: -15px;
+				margin-right: -15px;
+				overflow-x: hidden;
+			}
 		}
 
 		/* Mobile Landscape & Small Tablets (576px - 767px) */
 		@media (max-width: 767.98px) {
+
+			/* Continue overflow prevention on smaller screens */
+			body {
+				overflow-x: hidden;
+			}
+
+			.container,
+			.container-fluid,
+			.ftco-section,
+			.row {
+				overflow-x: hidden;
+			}
+
+			/* Disable all transform effects on smaller mobile */
+			.blog-entry:hover,
+			.blog-entry:active,
+			.resume-wrap:hover,
+			.resume-wrap:active,
+			.align-self-stretch.box:hover,
+			.align-self-stretch.box:active,
+			.block-18:hover,
+			.block-18:active,
+			.btn-primary:hover,
+			.btn-primary:active,
+			.btn-outline-white:hover,
+			.btn-outline-white:active,
+			.ftco-footer-social li a:hover,
+			.ftco-footer-social li a:active,
+			.navbar-brand:hover,
+			.btn-theme:hover {
+				transform: none !important;
+			}
+
 			.heading-section h1.big {
 				font-size: 12vw !important;
 				top: -25px;
