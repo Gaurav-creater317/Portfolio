@@ -1049,7 +1049,34 @@
 			transform: scale(1.1);
 		}
 
-		/* Responsive Media Queries */
+		/* ========================================
+		   RESPONSIVE MEDIA QUERIES
+		   ======================================== */
+
+		/* Large Tablets & Small Desktops (992px - 1199px) */
+		@media (max-width: 1199.98px) {
+			.container {
+				max-width: 960px;
+			}
+
+			.hero .text h1 {
+				font-size: 45px !important;
+			}
+
+			#typing-animation {
+				font-size: 28px;
+			}
+
+			.heading-section h1.big {
+				font-size: 8vw !important;
+			}
+
+			.blog-entry .text {
+				padding: 1.5rem;
+			}
+		}
+
+		/* Tablets (768px - 991px) */
 		@media (max-width: 991.98px) {
 			.navbar-nav {
 				background: rgba(15, 23, 42, 0.95);
@@ -1057,6 +1084,21 @@
 				padding: 20px;
 				border-radius: 15px;
 				margin-top: 15px;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+			}
+
+			[data-theme="light"] .navbar-nav {
+				background: rgba(255, 255, 255, 0.95);
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+			}
+
+			.navbar-nav .nav-link {
+				padding: 12px 15px !important;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+			}
+
+			.navbar-nav .nav-link:last-child {
+				border-bottom: none;
 			}
 
 			.heading-section h1.big {
@@ -1066,61 +1108,403 @@
 			.contact-form {
 				padding: 2rem !important;
 			}
+
+			.hero .text h1 {
+				font-size: 40px !important;
+			}
+
+			#typing-animation {
+				font-size: 26px;
+			}
+
+			.ftco-section {
+				padding: 5em 0;
+			}
+
+			.about-mf .box-shadow-full {
+				padding: 3rem 2rem;
+			}
+
+			.resume-wrap {
+				padding: 30px !important;
+			}
+
+			.blog-entry .block-20 {
+				height: 250px;
+			}
+
+			.block-18 {
+				margin-bottom: 30px;
+			}
+
+			.col-md-3,
+			.col-md-4,
+			.col-md-6 {
+				margin-bottom: 30px;
+			}
 		}
 
+		/* Mobile Landscape & Small Tablets (576px - 767px) */
 		@media (max-width: 767.98px) {
 			.heading-section h1.big {
 				font-size: 12vw !important;
 				top: -25px;
 			}
 
-			.resume-wrap {
-				padding: 25px !important;
+			.heading-section h2 {
+				font-size: 28px;
 			}
 
-			.about-info li span:first-child {
-				width: 120px;
-				font-size: 14px;
-			}
-
-			.about-info li span:last-child {
-				font-size: 14px;
+			.hero .text h1 {
+				font-size: 35px !important;
+				line-height: 1.3;
 			}
 
 			#typing-animation {
 				font-size: 24px;
 			}
 
-			.hero .text h1 {
-				font-size: 35px !important;
+			.hero .text .subheading {
+				font-size: 16px;
+			}
+
+			.resume-wrap {
+				padding: 25px !important;
+			}
+
+			.resume-wrap .date {
+				font-size: 22px;
+			}
+
+			.resume-wrap h2 {
+				font-size: 20px;
+			}
+
+			.about-info li {
+				flex-direction: column;
+				align-items: flex-start !important;
+				margin-bottom: 15px;
+			}
+
+			.about-info li span:first-child {
+				width: 100%;
+				font-size: 14px;
+				margin-bottom: 5px;
+			}
+
+			.about-info li span:last-child {
+				font-size: 14px;
+				width: 100%;
+			}
+
+			.ftco-section {
+				padding: 4em 0;
+			}
+
+			.about-mf .box-shadow-full {
+				padding: 2.5rem 1.5rem;
+			}
+
+			.skill-mf span {
+				font-size: 14px;
+			}
+
+			.blog-entry .block-20 {
+				height: 220px;
+			}
+
+			.blog-entry .text {
+				padding: 1.5rem;
+			}
+
+			.blog-entry .heading a {
+				font-size: 18px;
 			}
 
 			.ftco-footer-social {
 				flex-wrap: wrap;
+				justify-content: center;
 			}
 
 			.ftco-footer-social li {
-				margin-bottom: 10px;
+				margin: 5px;
+			}
+
+			.ftco-footer-social li a {
+				width: 45px;
+				height: 45px;
+			}
+
+			.block-23 ul li {
+				font-size: 14px;
+			}
+
+			.contact-form {
+				padding: 2rem 1.5rem !important;
+			}
+
+			.btn-primary,
+			.btn-outline-white {
+				padding: 12px 25px;
+				font-size: 14px;
+			}
+
+			.col-md-3,
+			.col-md-4,
+			.col-md-6,
+			.col-md-8 {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+
+			.col-md-3.col-sm-6,
+			.col-md-4.col-sm-6 {
+				flex: 0 0 50%;
+				max-width: 50%;
 			}
 		}
 
-		@media (max-width: 480px) {
+		/* Mobile Portrait (480px - 575px) */
+		@media (max-width: 575.98px) {
+			.container {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+
 			.heading-section h1.big {
-				font-size: 15vw !important;
+				font-size: 14vw !important;
+				top: -20px;
+			}
+
+			.heading-section h2 {
+				font-size: 24px;
+			}
+
+			.hero .text h1 {
+				font-size: 30px !important;
+			}
+
+			#typing-animation {
+				font-size: 20px;
+			}
+
+			.ftco-section {
+				padding: 3em 0;
+			}
+
+			.blog-entry .block-20 {
+				height: 200px;
+			}
+
+			.block-18 .number {
+				font-size: 32px;
+			}
+
+			.block-18 span {
+				font-size: 14px;
+			}
+
+			.col-md-3.col-sm-6,
+			.col-md-4.col-sm-6 {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+
+			.navbar-brand {
+				font-size: 20px !important;
+			}
+
+			.ftco-footer {
+				padding: 4em 0;
+			}
+
+			.ftco-footer-widget h2 {
+				font-size: 18px;
+			}
+		}
+
+		/* Small Mobile (320px - 479px) */
+		@media (max-width: 479.98px) {
+			.heading-section h1.big {
+				font-size: 16vw !important;
+				top: -15px;
+			}
+
+			.heading-section h2 {
+				font-size: 22px;
+			}
+
+			.hero .text h1 {
+				font-size: 26px !important;
+			}
+
+			#typing-animation {
+				font-size: 18px;
+			}
+
+			.hero .text .subheading {
+				font-size: 14px;
 			}
 
 			.btn-primary,
 			.btn-outline-white {
 				width: 100%;
 				margin-bottom: 10px;
+				padding: 10px 20px;
+				font-size: 13px;
 			}
 
 			.contact-form {
-				padding: 1.5rem !important;
+				padding: 1.5rem 1rem !important;
+			}
+
+			.contact-form .form-control {
+				font-size: 14px;
+				padding: 12px 15px !important;
+			}
+
+			.input-group-custom .form-control {
+				padding-left: 45px !important;
+			}
+
+			.resume-wrap {
+				padding: 20px !important;
 			}
 
 			.resume-wrap .date {
 				font-size: 20px;
+			}
+
+			.resume-wrap h2 {
+				font-size: 18px;
+			}
+
+			.resume-wrap .position {
+				font-size: 12px;
+			}
+
+			.blog-entry .block-20 {
+				height: 180px;
+			}
+
+			.blog-entry .text {
+				padding: 1rem;
+			}
+
+			.blog-entry .heading a {
+				font-size: 16px;
+			}
+
+			.blog-entry p {
+				font-size: 13px;
+			}
+
+			.about-mf .box-shadow-full {
+				padding: 2rem 1rem;
+			}
+
+			.skill-mf .progress {
+				height: 0.6rem;
+			}
+
+			.block-18 .number {
+				font-size: 28px;
+			}
+
+			.block-18 span {
+				font-size: 12px;
+			}
+
+			.ftco-footer-social li a {
+				width: 40px;
+				height: 40px;
+				font-size: 14px;
+			}
+
+			.ftco-footer {
+				padding: 3em 0;
+			}
+
+			.block-23 ul li {
+				font-size: 13px;
+			}
+
+			.block-23 ul li .icon {
+				width: 20px !important;
+				font-size: 14px;
+			}
+
+			.navbar-toggler {
+				padding: 6px 10px !important;
+			}
+
+			.btn-theme {
+				width: 35px;
+				height: 35px;
+			}
+		}
+
+		/* Extra Small Mobile (max 359px) */
+		@media (max-width: 359.98px) {
+			.hero .text h1 {
+				font-size: 24px !important;
+			}
+
+			#typing-animation {
+				font-size: 16px;
+			}
+
+			.heading-section h2 {
+				font-size: 20px;
+			}
+
+			.blog-entry .block-20 {
+				height: 160px;
+			}
+
+			.ftco-section {
+				padding: 2.5em 0;
+			}
+
+			.container {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+
+		/* Landscape Orientation Fixes */
+		@media (max-height: 500px) and (orientation: landscape) {
+			.hero {
+				min-height: auto;
+				padding: 100px 0 50px;
+			}
+
+			.ftco-section {
+				padding: 3em 0;
+			}
+
+			.heading-section h1.big {
+				font-size: 8vw !important;
+			}
+		}
+
+		/* Print Styles */
+		@media print {
+
+			.navbar,
+			.ftco-footer,
+			.btn-theme,
+			#toast-container {
+				display: none !important;
+			}
+
+			.ftco-section {
+				page-break-inside: avoid;
+			}
+
+			body {
+				background: white !important;
+				color: black !important;
 			}
 		}
 
@@ -1675,6 +2059,8 @@
 					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#internships-section" class="nav-link"><span>Internships</span></a>
+					</li>
 					<li class="nav-item"><a href="#certifications-section"
 							class="nav-link"><span>Certifications</span></a></li>
 					<li class="nav-item"><a href="#achievements-section" class="nav-link"><span>Achievements</span></a>
@@ -2226,7 +2612,7 @@
 				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
 					<div class="block-18">
 						<div class="text">
-							<strong class="number" data-number="5">0</strong>
+							<strong class="number" data-number="15">0</strong>
 							<span>Certications earned</span>
 						</div>
 					</div>
@@ -2249,6 +2635,67 @@
 				</div>
 			</div>
 			<!-- </div> -->
+		</div>
+		</div>
+	</section>
+
+	<!-- Internships Section -->
+	<section class="ftco-section" id="internships-section">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Internships</h1>
+					<h2 class="mb-4">My <span>Internships</span></h2>
+					<p>Experience gained through professional internships</p>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://drive.google.com/file/d/1V8UBcJDGk_1IMAs2EvpUCacQdSgp4bcv/view"
+							class="block-20 zoom-effect"
+							style="background-image: url('images/internships/Screenshot 2026-02-09 153010.png');"
+							target="_blank" rel="noopener noreferrer">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://drive.google.com/file/d/1V8UBcJDGk_1IMAs2EvpUCacQdSgp4bcv/view"
+									target="_blank" rel="noopener noreferrer">AI & Cloud Internship</a></h3>
+							<p>Edunet & IBM SkillsBuild</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://drive.google.com/file/d/1vrYtgPT1itOsqcgVRVyZnOCdBy2_0QsL/view?usp=sharing"
+							class="block-20 zoom-effect"
+							style="background-image: url('images/internships/Screenshot 2026-02-09 153302.png');"
+							target="_blank" rel="noopener noreferrer">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://drive.google.com/file/d/1vrYtgPT1itOsqcgVRVyZnOCdBy2_0QsL/view?usp=sharing"
+									target="_blank" rel="noopener noreferrer">Java Programming</a></h3>
+							<p>CodSoft - Virtual Internship</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate">
+					<div class="blog-entry justify-content-end">
+						<a href="https://drive.google.com/file/d/1sCnl-UH27dxjbt02tzL1eGVWeX--3zbP/view"
+							class="block-20 zoom-effect"
+							style="background-image: url('images/internships/Oasis Infobyte Web Development Certificate.png');"
+							target="_blank" rel="noopener noreferrer">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://drive.google.com/file/d/1sCnl-UH27dxjbt02tzL1eGVWeX--3zbP/view"
+									target="_blank" rel="noopener noreferrer">Web Development & Designing</a></h3>
+							<p>Oasis Infobyte - AICTE OIB-SIP</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -2493,6 +2940,65 @@
 									href="https://web.certificate.wfglobal.org/en/certificate?certificateId=67b4aa1e44cd89a4058c9833"
 									target="_blank" rel="noopener noreferrer">Employability Skills</a></h3>
 							<p>Wadhwani Foundation - JobReady Basic</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Row 4 -->
+			<div class="row mt-4 justify-content-center">
+				<!-- 13. Cognitive Class - SQL and Relational Databases 101 -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://courses.cognitiveclass.ai/certificates/4723b10f286d4c3798198c4aaa8be904"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #006699 0%, #003366 100%); display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/Screenshot 2026-02-09 150914.png"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="Cognitive Class">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://courses.cognitiveclass.ai/certificates/4723b10f286d4c3798198c4aaa8be904"
+									target="_blank" rel="noopener noreferrer">SQL & Relational Databases 101</a></h3>
+							<p>Cognitive Class - IBM DB0101EN</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 14. GeeksforGeeks - New Certificate -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://www.geeksforgeeks.org/certificate/0f6f51776072ab7cf8cbd541ea43cf39"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #2f8d46 0%, #1e5a2f 100%); display: flex; align-items: center; justify-content: center; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/Screenshot 2026-02-09 150419.png"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="GeeksforGeeks">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://www.geeksforgeeks.org/certificate/0f6f51776072ab7cf8cbd541ea43cf39"
+									target="_blank" rel="noopener noreferrer">MongoDB Developer's Toolkit</a></h3>
+							<p>GeeksforGeeks - Course Completion</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- 15. Oasis Infobyte - Appreciation Certificate -->
+				<div class="col-md-3 col-sm-6 d-flex ftco-animate">
+					<div class="blog-entry">
+						<a href="https://drive.google.com/file/d/1wIB9-dL3Aw1wm3-5NGcFktwodMvUcbaf/view?usp=sharing"
+							class="block-20 zoom-effect"
+							style="background: linear-gradient(135deg, #FFD700 0%, #B8860B 100%); display: flex; align-items: center; justify-content: center; position: relative;"
+							target="_blank" rel="noopener noreferrer">
+							<img src="images/certificates/Appreciation Certificate.png"
+								style="width: 100%; height: auto; border-radius: 8px;" alt="Oasis Infobyte">
+						</a>
+						<div class="text mt-3 float-right d-block">
+							<h3 class="heading"><a
+									href="https://drive.google.com/file/d/1wIB9-dL3Aw1wm3-5NGcFktwodMvUcbaf/view?usp=sharing"
+									target="_blank" rel="noopener noreferrer">Star Performer Award</a></h3>
+							<p>Oasis Infobyte - Internship Appreciation</p>
 						</div>
 					</div>
 				</div>
@@ -2813,6 +3319,9 @@
 							<li><a href="#resume-section"><span class="icon-long-arrow-right mr-2"></span>Resume</a>
 							</li>
 							<li><a href="#project-section"><span class="icon-long-arrow-right mr-2"></span>Projects</a>
+							</li>
+							<li><a href="#internships-section"><span
+										class="icon-long-arrow-right mr-2"></span>Internships</a>
 							</li>
 							<li><a href="#certifications-section"><span
 										class="icon-long-arrow-right mr-2"></span>Certifications</a>
