@@ -66,22 +66,25 @@ AOS.init({
 	var onePageClick = function () {
 
 
-		$(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
-			event.preventDefault();
+		$(document).on('click', 'a[href^="#"]', function (event) {
+			if (this.hash !== "") {
+				event.preventDefault();
 
-			var href = $.attr(this, 'href');
+				var hash = this.hash;
+				var target = $(hash);
 
-			// Instant close without animation
-			if ($('#ftco-nav').hasClass('show')) {
-				$('#ftco-nav').removeClass('show');
-				$('.js-fh5co-nav-toggle').removeClass('active');
+				if (target.length) {
+					// Instant close mobile menu if it's open
+					if ($('#ftco-nav').hasClass('show')) {
+						$('#ftco-nav').removeClass('show');
+						$('.js-fh5co-nav-toggle').removeClass('active');
+					}
+
+					$('html, body').animate({
+						scrollTop: target.offset().top - 70
+					}, 1200, 'easeInOutExpo');
+				}
 			}
-
-			$('html, body').animate({
-				scrollTop: $($.attr(this, 'href')).offset().top - 70
-			}, 500, function () {
-				// window.location.hash = href;
-			});
 		});
 
 	};
