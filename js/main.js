@@ -7,25 +7,28 @@ AOS.init({
 
 	"use strict";
 
-	$(window).stellar({
-		responsive: true,
-		parallaxBackgrounds: true,
-		parallaxElements: true,
-		horizontalScrolling: false,
-		hideDistantElements: false,
-		scrollProperty: 'scroll'
-	});
-
-
 	var fullHeight = function () {
-
 		$('.js-fullheight').css('height', $(window).height());
 		$(window).resize(function () {
-			$('.js-fullheight').css('height', $(window).height());
+			if (window.innerWidth > 991) {
+				$('.js-fullheight').css('height', $(window).height());
+			}
 		});
-
 	};
 	fullHeight();
+
+	// Only init Stellar on Desktop for better mobile performance and scroll feel
+	if (window.innerWidth > 991) {
+		$(window).stellar({
+			responsive: true,
+			parallaxBackgrounds: true,
+			parallaxElements: true,
+			horizontalScrolling: false,
+			hideDistantElements: false,
+			scrollProperty: 'scroll'
+		});
+	}
+
 
 	// loader
 	var loader = function () {
@@ -37,8 +40,10 @@ AOS.init({
 	};
 	loader();
 
-	// Scrollax
-	$.Scrollax();
+	// Scrollax only for Desktop
+	if (window.innerWidth > 991) {
+		$.Scrollax();
+	}
 
 
 
@@ -80,9 +85,9 @@ AOS.init({
 						$('.js-fh5co-nav-toggle').removeClass('active');
 					}
 
-					$('html, body').animate({
+					$('html, body').stop().animate({
 						scrollTop: target.offset().top - 70
-					}, 1800, 'easeInOutExpo');
+					}, 600, 'easeInOutExpo');
 				}
 			}
 		});
