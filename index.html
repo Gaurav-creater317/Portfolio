@@ -4052,6 +4052,16 @@
 			body.setAttribute('data-theme', newTheme);
 			localStorage.setItem('theme', newTheme);
 
+			// Instant close without animation
+			if (window.innerWidth < 992) {
+				const nav = document.getElementById('ftco-nav');
+				if (nav.classList.contains('show')) {
+					nav.classList.remove('show');
+					const toggler = document.querySelector('.js-fh5co-nav-toggle');
+					if (toggler) toggler.classList.remove('active');
+				}
+			}
+
 			// Sound or feedback could be added here
 			showNotification(`${newTheme.charAt(0).toUpperCase() + newTheme.slice(1)} Mode Activated!`);
 		});
