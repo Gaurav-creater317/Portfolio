@@ -60,7 +60,7 @@
 		body {
 			background-color: var(--bg-body) !important;
 			color: var(--text-main) !important;
-			transition: all 0.4s ease;
+			transition: background-color 0.4s ease, color 0.4s ease;
 		}
 
 		/* Light Mode Specific Overrides */
@@ -2590,13 +2590,16 @@
 			}
 		}
 
-		/* Fix for horizontal scroll issues */
+		/* Improved scroll experience on mobile */
 		html,
 		body {
 			overflow-x: hidden !important;
 			width: 100%;
 			position: relative;
-			-webkit-overflow-scrolling: touch;
+			-webkit-overflow-scrolling: auto;
+			/* Changed from touch to auto to prevent too much momentum if it feels fast */
+			scroll-behavior: auto !important;
+			/* Force auto to ensure JS control is predictable */
 		}
 	</style>
 

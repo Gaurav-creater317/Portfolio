@@ -82,7 +82,7 @@ AOS.init({
 
 					$('html, body').animate({
 						scrollTop: target.offset().top - 70
-					}, 1200, 'easeInOutExpo');
+					}, 1800, 'easeInOutExpo');
 				}
 			}
 		});
