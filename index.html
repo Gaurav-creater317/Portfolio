@@ -2591,14 +2591,15 @@
 		}
 
 
-		/* Fix for horizontal scroll and stability issues */
+		/* Fix for runaway scroll and stability issues */
 		html,
 		body {
 			overflow-x: hidden !important;
 			width: 100%;
 			position: relative;
-			/* Native momentum for better weight/control */
-			-webkit-overflow-scrolling: touch;
+			/* Standard scrolling to prevent fast slides */
+			-webkit-overflow-scrolling: auto;
+			touch-action: pan-y;
 		}
 	</style>
 
