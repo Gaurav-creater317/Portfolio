@@ -60,7 +60,7 @@
 		body {
 			background-color: var(--bg-body) !important;
 			color: var(--text-main) !important;
-			transition: all 0.4s ease;
+			transition: background-color 0.4s ease, color 0.4s ease;
 		}
 
 		/* Light Mode Specific Overrides */
@@ -2597,8 +2597,8 @@
 			overflow-x: hidden !important;
 			width: 100%;
 			position: relative;
-			/* Standardized scrolling for more control */
-			scroll-behavior: smooth;
+			/* Native momentum for better weight/control */
+			-webkit-overflow-scrolling: touch;
 		}
 	</style>
 
