@@ -33,16 +33,18 @@
 		/* Add this CSS to your style section */
 		/* Theme Variables */
 		:root {
-			--primary-color: #2563eb;
-			--primary-hover: #1d4ed8;
-			--bg-body: #0a0f1d;
-			--bg-card: rgba(30, 41, 59, 0.7);
+			--primary-color: #3b82f6;
+			--primary-hover: #2563eb;
+			--bg-body: #020617;
+			/* Deeper space black-blue */
+			--bg-card: rgba(15, 23, 42, 0.6);
 			--text-main: #f8fafc;
-			--text-muted: rgba(248, 250, 252, 0.7);
-			--navbar-bg: rgba(15, 23, 42, 0.8);
-			--border-color: rgba(255, 255, 255, 0.1);
-			--watermark-color: rgba(255, 255, 255, 0.05);
-			--footer-bg: #0f172a;
+			--text-muted: #94a3b8;
+			--navbar-bg: rgba(2, 6, 23, 0.7);
+			--border-color: rgba(255, 255, 255, 0.08);
+			--watermark-color: rgba(255, 255, 255, 0.03);
+			--footer-bg: #020617;
+			--star-color: #ffffff;
 		}
 
 		[data-theme="light"] {
@@ -179,6 +181,10 @@
 
 		[data-theme="light"] section {
 			background-color: var(--bg-body) !important;
+		}
+
+		[data-theme="dark"] section {
+			background-color: transparent !important;
 		}
 
 		[data-theme="light"] .hero .text h1 span {
@@ -702,7 +708,7 @@
 			padding: 120px 0 80px 0;
 			position: relative;
 			overflow: hidden;
-			background: #0a0f1d;
+			background: transparent;
 		}
 
 		.hero-glow-1 {
@@ -711,7 +717,7 @@
 			right: -10%;
 			width: 500px;
 			height: 500px;
-			background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+			background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
 			z-index: 0;
 			pointer-events: none;
 		}
@@ -722,7 +728,7 @@
 			left: -10%;
 			width: 600px;
 			height: 600px;
-			background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+			background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
 			z-index: 0;
 			pointer-events: none;
 		}
@@ -2601,6 +2607,106 @@
 			-webkit-overflow-scrolling: auto;
 			touch-action: pan-y;
 		}
+
+		/* Starry Night Sky Elements */
+		.stars-container {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			z-index: -5;
+			pointer-events: none;
+			background: radial-gradient(ellipse at bottom, #0f172a 0%, #020617 100%);
+			transition: opacity 0.5s ease;
+		}
+
+		[data-theme="light"] .stars-container {
+			display: none;
+		}
+
+		[data-theme="dark"] body {
+			background: #020617 !important;
+		}
+
+		#stars,
+		#stars2,
+		#stars3 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: transparent;
+			border-radius: 50%;
+		}
+
+		#stars {
+			width: 1px;
+			height: 1px;
+			animation: twinkle 3s infinite;
+		}
+
+		#stars2 {
+			width: 2px;
+			height: 2px;
+			animation: twinkle 5s infinite;
+		}
+
+		#stars3 {
+			width: 3px;
+			height: 3px;
+			animation: twinkle 7s infinite;
+		}
+
+		/* Nebula Glows */
+		.nebula {
+			position: fixed;
+			width: 60vw;
+			height: 60vw;
+			border-radius: 50%;
+			pointer-events: none;
+			z-index: -4;
+			filter: blur(100px);
+			opacity: 0.15;
+			animation: nebulaPulse 10s infinite alternate;
+		}
+
+		.nebula-1 {
+			top: -10%;
+			right: -10%;
+			background: radial-gradient(circle, #3b82f6 0%, transparent 70%);
+		}
+
+		.nebula-2 {
+			bottom: -10%;
+			left: -10%;
+			background: radial-gradient(circle, #7c3aed 0%, transparent 70%);
+			animation-delay: -5s;
+		}
+
+		/* Twinkling Animation */
+		@keyframes twinkle {
+
+			0%,
+			100% {
+				opacity: 0.5;
+			}
+
+			50% {
+				opacity: 1;
+			}
+		}
+
+		@keyframes nebulaPulse {
+			0% {
+				transform: scale(1);
+				opacity: 0.1;
+			}
+
+			100% {
+				transform: scale(1.1);
+				opacity: 0.2;
+			}
+		}
 	</style>
 
 
@@ -2608,6 +2714,15 @@
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	<!-- Starry Night Background -->
+	<div class="stars-container">
+		<div id="stars"></div>
+		<div id="stars2"></div>
+		<div id="stars3"></div>
+		<div class="nebula nebula-1"></div>
+		<div class="nebula nebula-2"></div>
+	</div>
+
 	<!-- Toast Container -->
 	<div id="toast-container"></div>
 
@@ -4064,6 +4179,35 @@
 
 			// Sound or feedback could be added here
 			showNotification(`${newTheme.charAt(0).toUpperCase() + newTheme.slice(1)} Mode Activated!`);
+		});
+
+		// Star Generation Logic
+		function createStars() {
+			const generateStars = (n, selector) => {
+				const stars = [];
+				for (let i = 0; i < n; i++) {
+					const x = Math.floor(Math.random() * window.innerWidth);
+					const y = Math.floor(Math.random() * window.innerHeight);
+					const opacity = Math.random();
+					stars.push(`${x}px ${y}px rgba(255, 255, 255, ${opacity})`);
+				}
+				const el = document.querySelector(selector);
+				if (el) el.style.boxShadow = stars.join(', ');
+			};
+
+			generateStars(300, '#stars');
+			generateStars(100, '#stars2');
+			generateStars(50, '#stars3');
+		}
+
+		// Initial creation
+		createStars();
+
+		// Update on resize to fill screen
+		let resizeTimeout;
+		window.addEventListener('resize', () => {
+			clearTimeout(resizeTimeout);
+			resizeTimeout = setTimeout(createStars, 250);
 		});
 	</script>
 
