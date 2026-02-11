@@ -1239,6 +1239,14 @@
 			color: #fff !important;
 		}
 
+		/* Enhance watermark visibility on section hover (Dark Mode) */
+		.heading-section:hover h1.big {
+			color: rgba(255, 255, 255, 0.15) !important;
+			opacity: 1 !important;
+			transform: translateY(-5px);
+			transition: all 0.5s ease;
+		}
+
 		/* Achievement Counters */
 		.block-18 {
 			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -2320,7 +2328,8 @@
 			border-radius: 12px;
 		}
 
-		.heading-section p:hover {
+		.heading-section p:hover,
+		.heading-section:hover p {
 			background: rgba(37, 99, 235, 0.05);
 			transform: scale(1.01);
 			box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1);
@@ -3834,7 +3843,7 @@
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Contact</h1>
-					<h2 class="mb-4">Contact Me</h2>
+					<h2 class="mb-4">Contact <span>Me</span></h2>
 					<p>Below are the details to reach out to me!</p>
 				</div>
 			</div>
@@ -3882,7 +3891,7 @@
 			<div class="row justify-content-center mt-5 mb-5" id="get-in-touch" style="margin-top: 7rem !important;">
 				<div class="col-md-7 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Get in touch</h1>
-					<h2 class="mb-4">Get in Touch</h2>
+					<h2 class="mb-4">Get in <span>Touch</span></h2>
 					<p>Have a question or want to discuss a project? Feel free to reach out!</p>
 				</div>
 			</div>
