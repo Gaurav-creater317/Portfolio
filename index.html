@@ -4504,9 +4504,20 @@
 					});
 
 					// Refresh Waypoints so scroll animations below the projects section trigger correctly
-					if (window.jQuery && jQuery.waypoints) {
-						setTimeout(() => jQuery.waypoints('refresh'), 100);
+					if (window.Waypoint) {
+						setTimeout(() => window.Waypoint.refreshAll(), 150);
 					}
+
+					// Instantly show any items that are now in the viewport to avoid slow staggered loading
+					setTimeout(() => {
+						document.querySelectorAll('.ftco-animate:not(.ftco-animated)').forEach(el => {
+							const rect = el.getBoundingClientRect();
+							if (rect.top < window.innerHeight + 100) {
+								el.classList.add('ftco-animated', 'fadeInUp');
+								el.classList.remove('item-animate');
+							}
+						});
+					}, 200);
 				});
 			});
 		});
