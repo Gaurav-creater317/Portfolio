@@ -4496,7 +4496,7 @@
 					projectItems.forEach(item => {
 						if (filterValue === 'all' || item.classList.contains('filter-' + filterValue)) {
 							item.classList.remove('d-none');
-							item.classList.add('d-flex');
+							item.classList.add('d-flex', 'ftco-animated', 'fadeInUp');
 						} else {
 							item.classList.remove('d-flex');
 							item.classList.add('d-none');
