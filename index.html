@@ -1351,6 +1351,93 @@
 			letter-spacing: 1px;
 		}
 
+		/* Project Tech Tags Styling */
+		.tech-used {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin-bottom: 15px;
+			padding-bottom: 15px;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		}
+
+		.tech-tag {
+			background: rgba(37, 99, 235, 0.1);
+			color: var(--primary-color);
+			padding: 4px 12px;
+			border-radius: 20px;
+			font-size: 12px;
+			font-weight: 600;
+			border: 1px solid rgba(37, 99, 235, 0.2);
+			transition: all 0.3s ease;
+		}
+
+		.tech-tag:hover {
+			background: var(--primary-color);
+			color: #ffffff;
+			transform: translateY(-2px);
+			box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+		}
+
+		[data-theme="light"] .tech-used {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+		}
+
+		[data-theme="light"] .tech-tag {
+			background: rgba(37, 99, 235, 0.08);
+		}
+
+		/* Project Filters Styling */
+		.project-filters {
+			margin-bottom: 30px;
+			display: inline-flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			background: rgba(30, 41, 59, 0.4);
+			backdrop-filter: blur(10px);
+			padding: 8px;
+			border-radius: 50px;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+		}
+
+		.project-filters .filter-btn {
+			background: transparent;
+			border: none;
+			color: var(--text-main);
+			padding: 10px 24px;
+			margin: 2px;
+			border-radius: 30px;
+			font-weight: 600;
+			letter-spacing: 0.5px;
+			transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+			cursor: pointer;
+		}
+
+		.project-filters .filter-btn:hover,
+		.project-filters .filter-btn.active {
+			background: var(--primary-color);
+			color: #ffffff;
+			box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+			transform: translateY(-2px);
+		}
+
+		[data-theme="light"] .project-filters {
+			background: #ffffff;
+			border: 1px solid rgba(0, 0, 0, 0.05);
+			box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+		}
+
+		[data-theme="light"] .project-filters .filter-btn {
+			color: #475569;
+		}
+
+		[data-theme="light"] .project-filters .filter-btn:hover,
+		[data-theme="light"] .project-filters .filter-btn.active {
+			color: #ffffff;
+			background: var(--primary-color);
+		}
+
 		/* ========================================
 		   RESPONSIVE MEDIA QUERIES
 		   ======================================== */
@@ -3160,16 +3247,27 @@
 
 	<section class="ftco-section" id="project-section">
 		<div class="container">
-			<div class="row justify-content-center mb-5 pb-5">
+			<div class="row justify-content-center mb-3 pb-0">
 				<div class="col-md-7 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Projects</h1>
 					<h2 class="mb-4">Projects</h2>
 					<p>Below are the some projects ideas based on Artificial Intelligence and Web Development </p>
 				</div>
 			</div>
-			<div class="row d-flex">
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
+
+			<div class="row w-100 justify-content-center mb-4">
+				<div class="project-filters text-center">
+					<button class="filter-btn active" data-filter="all">All</button>
+					<button class="filter-btn" data-filter="gen-ai">Gen AI</button>
+					<button class="filter-btn" data-filter="frontend">Frontend</button>
+					<button class="filter-btn" data-filter="backend">Backend</button>
+					<button class="filter-btn" data-filter="full-stack">Full Stack</button>
+				</div>
+			</div>
+
+			<div class="row d-flex justify-content-center flex-wrap project-list">
+				<div class="col-md-4 d-flex ftco-animate project-item filter-all filter-frontend">
+					<div class="blog-entry justify-content-end w-100">
 						<a href="https://pic-discover-gaurav-s-projects-d25bef28.vercel.app/"
 							class="block-20 zoom-effect" style="background-image: url('images/Image Search App.png');"
 							target="_blank" rel="noopener noreferrer"></a>
@@ -3178,6 +3276,12 @@
 
 							<h3 class="heading"><a href="https://github.com/Gaurav-creater317/Pic-Discover"
 									target="_blank" rel="noopener noreferrer">Pic Discover App</a></h3>
+							<div class="tech-used">
+								<span class="tech-tag">HTML</span>
+								<span class="tech-tag">CSS</span>
+								<span class="tech-tag">JavaScript</span>
+								<span class="tech-tag">Unsplash API</span>
+							</div>
 							<p>The Pic Discover App is an engaging web application that enables users to explore and
 								discover a diverse array of images. Built using HTML, CSS, and JavaScript, this project
 								demonstrates the power of these technologies in creating a dynamic and interactive user
@@ -3190,8 +3294,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
+				<div class="col-md-4 d-flex ftco-animate project-item filter-all filter-full-stack">
+					<div class="blog-entry justify-content-end w-100">
 						<a href="https://fitness-pro-services.vercel.app/" class="block-20 zoom-effect"
 							style="background-image: url('images/Fitness Pro.png');" target="_blank"
 							rel="noopener noreferrer">
@@ -3201,16 +3305,28 @@
 							<h3 class="heading"><a href="https://github.com/Gaurav-creater317/Fitness-Pro/tree/main"
 									target="_blank" rel="noopener noreferrer">Fitness Pro – Full-Stack Gym Management
 									Website</a></h3>
+							<div class="tech-used">
+								<span class="tech-tag">React.js (Vite)</span>
+								<span class="tech-tag" title="Cinematic Animations">Framer Motion</span>
+								<span class="tech-tag" title="Modern Icons">Lucide React</span>
+								<span class="tech-tag" title="API Requests">Axios</span>
+								<span class="tech-tag" title="Custom Premium Styling">Vanilla CSS</span>
+								<span class="tech-tag">Node.js</span>
+								<span class="tech-tag">Express.js</span>
+								<span class="tech-tag" title="Email Services">Nodemailer</span>
+								<span class="tech-tag" title="Security">CORS</span>
+								<span class="tech-tag" title="Config Management">Dotenv</span>
+							</div>
 							<p>A full-stack gym management web application built with React, Node.js, and Express,
 								featuring responsive UI, secure authentication, BMI calculator, and integrated contact
 								messaging. Live frontend and backend deployed on Vercel.</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry">
+				<div class="col-md-4 d-flex ftco-animate project-item filter-all filter-full-stack filter-gen-ai">
+					<div class="blog-entry w-100">
 						<a href="https://resumelens-nine.vercel.app/" class="block-20 zoom-effect"
-							style="background-image: url('images/Resume Lens.png');" target="_blank"
+							style="background-image: url('images/Resume Analyzer.jpg');" target="_blank"
 							rel="noopener noreferrer">
 						</a>
 						<div class="text mt-3 float-right d-block">
@@ -3218,6 +3334,20 @@
 							<h3 class="heading"><a href="https://github.com/Gaurav-creater317/Resume-Lens"
 									target="_blank" rel="noopener noreferrer">Resume Lens – Full-Stack AI Resume
 									Analyzer</a></h3>
+							<div class="tech-used">
+								<span class="tech-tag">React 19 (Vite)</span>
+								<span class="tech-tag" title="Animations & transitions">Framer Motion</span>
+								<span class="tech-tag" title="Icons">Lucide React</span>
+								<span class="tech-tag" title="API communication">Axios</span>
+								<span class="tech-tag" title="Interactive feedback">Canvas Confetti</span>
+								<span class="tech-tag" title="Custom responsive styling">Vanilla CSS</span>
+								<span class="tech-tag">Node.js & Express</span>
+								<span class="tech-tag">Google Gemini AI</span>
+								<span class="tech-tag" title="Email delivery">Nodemailer</span>
+								<span class="tech-tag" title="File uploads">Multer</span>
+								<span class="tech-tag" title="Resume text extraction">PDF-Parse</span>
+								<span class="tech-tag" title="Advanced email validation">DNS & Regex</span>
+							</div>
 							<p>Resume Lens is a full-stack AI-powered application that allows users to upload their
 								resumes in PDF format, analyzes them using AI based on selected job roles, and delivers
 								clear, actionable feedback along with detailed improvement reports directly to the
@@ -3225,12 +3355,9 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<br>
-			<!-- added justify-content-center to center align the last two projects -->
-			<div class="row d-flex justify-content-center">
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
+				<!-- Inner items from previous second row -->
+				<div class="col-md-4 d-flex ftco-animate project-item filter-all filter-frontend">
+					<div class="blog-entry justify-content-end w-100">
 						<a href="https://weather-app-gaurav-s-projects-d25bef28.vercel.app" class="block-20 zoom-effect"
 							style="background-image: url('images/weather.webp');" target="_blank"
 							rel="noopener noreferrer">
@@ -3239,15 +3366,22 @@
 
 							<h3 class="heading"><a href="https://github.com/Gaurav-creater317/Weather-App"
 									target="_blank" rel="noopener noreferrer">Weather App</a></h3>
+							<div class="tech-used">
+								<span class="tech-tag">HTML</span>
+								<span class="tech-tag">CSS</span>
+								<span class="tech-tag">JavaScript</span>
+								<span class="tech-tag">Weather API</span>
+							</div>
 							<p>The Weather App is a sleek and responsive web application that allows users to check
 								real-time weather information for any city across the globe. Built using modern web
-								technologies, it fetches live data from a weather API and presents it in a user-friendly
+								technologies, it fetches live data from a weather API and presents it in a
+								user-friendly
 								and visually appealing format.</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
+				<div class="col-md-4 d-flex ftco-animate project-item filter-all filter-full-stack filter-gen-ai">
+					<div class="blog-entry justify-content-end w-100">
 						<a href="https://dsa-galaxy.vercel.app/" class="block-20 zoom-effect"
 							style="background-image: url('images/Dsa instuctor.png');" target="_blank"
 							rel="noopener noreferrer">
@@ -3257,14 +3391,78 @@
 							<h3 class="heading"><a href="https://github.com/Gaurav-creater317/dsa-galaxy"
 									target="_blank" rel="noopener noreferrer">DSA Galaxy – AI Powered DSA Learning
 									Platform</a></h3>
-							<p>DSA Galaxy is a full-stack web application that helps users understand Data Structures
-								and Algorithms (DSA) through an interactive, AI-powered chat experience. After signing
-								up or logging in, users can ask questions related to DSA topics such as arrays, linked
+							<div class="tech-used">
+								<span class="tech-tag">React</span>
+								<span class="tech-tag">TypeScript</span>
+								<span class="tech-tag">Vite</span>
+								<span class="tech-tag">Tailwind CSS</span>
+								<span class="tech-tag">shadcn/ui</span>
+								<span class="tech-tag" title="Authentication & Database (Supabase)">Supabase</span>
+								<span class="tech-tag" title="AI / LLM API integration">AI / LLM</span>
+								<span class="tech-tag" title="Managed cloud database">PostgreSQL</span>
+								<span class="tech-tag">Git & GitHub</span>
+								<span class="tech-tag">Vercel</span>
+							</div>
+							<p>DSA Galaxy is a full-stack web application that helps users understand Data
+								Structures
+								and Algorithms (DSA) through an interactive, AI-powered chat experience. After
+								signing
+								up or logging in, users can ask questions related to DSA topics such as arrays,
+								linked
 								lists, trees, graphs, sorting algorithms, and dynamic programming.
-								The platform responds with DSA-focused explanations, emphasizing intuition, algorithm
-								flow, and time & space complexity where applicable.This project demonstrates my ability
+								The platform responds with DSA-focused explanations, emphasizing intuition,
+								algorithm
+								flow, and time & space complexity where applicable.This project demonstrates my
+								ability
 								to design, build, and deploy a modern full-stack application with authentication, UI
 								state management, and AI integration. </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate project-item filter-all filter-frontend">
+					<div class="blog-entry justify-content-end w-100">
+						<a href="https://computernetworksprotocalsvisualizer.vercel.app/" class="block-20 zoom-effect"
+							style="background-image: url('images/Network Protocols.png');" target="_blank"
+							rel="noopener noreferrer">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a
+									href="https://github.com/Gaurav-creater317/Computer-Networks-Protocals-Visualizer"
+									target="_blank" rel="noopener noreferrer">Computer Networks Protocols Visualizer</a>
+							</h3>
+							<div class="tech-used">
+								<span class="tech-tag">React</span>
+								<span class="tech-tag">TypeScript</span>
+								<span class="tech-tag">Vite</span>
+								<span class="tech-tag">Tailwind CSS</span>
+								<span class="tech-tag">shadcn/ui</span>
+							</div>
+							<p>Learn computer network protocols through interactive visualizations and animations.
+								Explore TCP, UDP, DNS, DHCP, and more with step-by-step explanations.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 d-flex ftco-animate project-item filter-all filter-backend">
+					<div class="blog-entry justify-content-end w-100">
+						<a href="https://github.com/Gaurav-creater317/voting_app" class="block-20 zoom-effect"
+							style="background-image: url('images/Voting Application.png');" target="_blank"
+							rel="noopener noreferrer">
+						</a>
+						<div class="text mt-3 float-right d-block">
+
+							<h3 class="heading"><a href="https://github.com/Gaurav-creater317/voting_app"
+									target="_blank" rel="noopener noreferrer">Voting Application Backend</a>
+							</h3>
+							<div class="tech-used">
+								<span class="tech-tag">Node.js</span>
+								<span class="tech-tag">Express.js</span>
+								<span class="tech-tag">MongoDB</span>
+								<span class="tech-tag" title="JSON Web Tokens">JWT</span>
+							</div>
+							<p>A secure backend application for a voting system where users can authenticate with their
+								Aadhar Card, view candidates, and securely vote. Includes full admin candidate
+								management.</p>
 						</div>
 					</div>
 				</div>
@@ -4279,6 +4477,33 @@
 		window.addEventListener('resize', () => {
 			clearTimeout(resizeTimeout);
 			resizeTimeout = setTimeout(createStars, 250);
+		});
+
+		// Project Filtering Logic
+		document.addEventListener('DOMContentLoaded', function () {
+			const filterBtns = document.querySelectorAll('.filter-btn');
+			const projectItems = document.querySelectorAll('.project-item');
+
+			filterBtns.forEach(btn => {
+				btn.addEventListener('click', function () {
+					// Remove active class from all buttons
+					filterBtns.forEach(b => b.classList.remove('active'));
+					// Add active class to clicked button
+					this.classList.add('active');
+
+					const filterValue = this.getAttribute('data-filter');
+
+					projectItems.forEach(item => {
+						if (filterValue === 'all' || item.classList.contains('filter-' + filterValue)) {
+							item.classList.remove('d-none');
+							item.classList.add('d-flex');
+						} else {
+							item.classList.remove('d-flex');
+							item.classList.add('d-none');
+						}
+					});
+				});
+			});
 		});
 	</script>
 
