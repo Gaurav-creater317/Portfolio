@@ -4502,6 +4502,11 @@
 							item.classList.add('d-none');
 						}
 					});
+
+					// Refresh Waypoints so scroll animations below the projects section trigger correctly
+					if (window.jQuery && jQuery.waypoints) {
+						setTimeout(() => jQuery.waypoints('refresh'), 100);
+					}
 				});
 			});
 		});
